@@ -133,15 +133,50 @@ server.port=8085
 ```
 Runs 19 automated tests (Day type resolution, OT math, statutory deductions, locks, PDF generation, security).
 
-### 3. Start the Server
+### 3. Start the Backend Server
 ```powershell
 .\mvnw.cmd spring-boot:run
 ```
 The server will start on **`http://localhost:8085`**.
 
-### 4. Open Swagger UI
-Visit the interactive Swagger UI:
+### 4. Start the React Frontend Dashboard
+Open a second terminal:
+```powershell
+cd frontend
+npm run dev
+```
+Open your browser at 👉 **`http://localhost:5173`**.
+* The frontend includes **quick-switch demo accounts** for `Finance Manager`, `HR Admin`, and `Employee`.
+* Automatically proxies API calls to the backend on `http://localhost:8085`.
+
+### 5. Interactive Swagger UI
+Visit the Swagger documentation:
 👉 **[http://localhost:8085/swagger-ui.html](http://localhost:8085/swagger-ui.html)**
+
+---
+
+## 🐙 Pushing to GitHub
+
+The project has been initialized as an independent, clean Git repository inside `c:\Users\JANARTHTHAN\Desktop\finance_module` with full `.gitignore` coverage.
+
+To push this project to your GitHub account:
+
+1. **Create an empty repository on GitHub**:
+   * Go to [github.com/new](https://github.com/new)
+   * Name your repository (e.g. `payroll-finance-system` or `finance-module`).
+   * **Do not** initialize with a README, .gitignore, or license (they are already included).
+
+2. **Link and Push from your terminal**:
+   ```powershell
+   # 1. Add your GitHub repository remote
+   git remote add origin https://github.com/<your-github-username>/<your-repo-name>.git
+
+   # 2. Ensure default branch is main
+   git branch -M main
+
+   # 3. Push all commits to GitHub
+   git push -u origin main
+   ```
 
 Click **Authorize** and enter your Bearer token after logging in via `/api/auth/login`.
 
