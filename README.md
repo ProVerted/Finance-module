@@ -122,8 +122,8 @@ CREATE DATABASE IF NOT EXISTS payroll_db CHARACTER SET utf8mb4 COLLATE utf8mb4_u
 Check your MySQL credentials in `src/main/resources/application.properties`:
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/payroll_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-spring.datasource.username=root
-spring.datasource.password=Ajith@THALA.com
+spring.datasource.username=your_username
+spring.datasource.password=your_password
 server.port=8085
 ```
 
